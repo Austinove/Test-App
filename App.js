@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import ComponentsScreen from './src/components/ComponentsScreen';
-import ListScreen from './src/components/ListScreen';
-import ImageScreen from './src/components/ImageScreen';
+import ComponentsScreen from './src/screens/ComponentsScreen';
+import ListScreen from './src/screens/ListScreen';
+import ImageScreen from './src/screens/ImageScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
