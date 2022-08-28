@@ -1,22 +1,19 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {View, Text, StyleSheet, Button, TouchableOpacity} from 'react-native'; 
-const ComponentsScreen = (props) => {
-  console.log(props)
+const ComponentsScreen = ({navigation}) => {
   const myName = 'Bryan Austin';
   return (
-    <View>
+    <View style={style.viewLayout}>
       <Text style={style.textStyle}>Getting Started With React Native</Text>
       <Text style={style.subHeaderStyle}>My Name is {myName}</Text>
       <Button
+        style={style.buttonStyle}
         onPress={() => console.log("Button Pressed")}
         title='Got to Components Demo'
       />
-      <TouchableOpacity onPress={() => console.log('List Pressed')}>
-        <Text>Go to List Demo</Text>
-        <Text>Go to List Demo</Text>
-        <Text>Go to List Demo</Text>
-      </TouchableOpacity>
+      <Button style={style.buttonStyle} onPress={() => navigation.navigate("ListScreen")} title="Go to List Demo" />
+      <Button style={style.buttonStyle} onPress={() => navigation.navigate("ImageScreen")} title="Find Images" />
     </View>
   );
 };
@@ -29,9 +26,13 @@ const style = StyleSheet.create({
   },
   viewLayout: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
+  buttonStyle: {
+    marginBottom: 4,
+    fontSize: 40,
+    height: 50,
+    width: 60
+  }
 });
 
 export default ComponentsScreen;
