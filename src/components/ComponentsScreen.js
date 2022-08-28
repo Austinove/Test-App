@@ -1,12 +1,22 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native'; 
-const ComponentsScreen = () => {
+import {View, Text, StyleSheet, Button, TouchableOpacity} from 'react-native'; 
+const ComponentsScreen = (props) => {
+  console.log(props)
   const myName = 'Bryan Austin';
   return (
-    <View style={style.viewLayout}>
+    <View>
       <Text style={style.textStyle}>Getting Started With React Native</Text>
       <Text style={style.subHeaderStyle}>My Name is {myName}</Text>
+      <Button
+        onPress={() => console.log("Button Pressed")}
+        title='Got to Components Demo'
+      />
+      <TouchableOpacity onPress={() => console.log('List Pressed')}>
+        <Text>Go to List Demo</Text>
+        <Text>Go to List Demo</Text>
+        <Text>Go to List Demo</Text>
+      </TouchableOpacity>
     </View>
   );
 };
