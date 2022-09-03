@@ -15,6 +15,8 @@ const ComponentsScreen = ({navigation}) => {
       <Button style={style.buttonStyle} onPress={() => navigation.navigate("ListScreen")} title="Go to List Demo" />
       <Button style={style.buttonStyle} onPress={() => navigation.navigate("ImageScreen")} title="Find Images" />
       <Button onPress={() => navigation.navigate("CounterScreen")} title="Go to Counter Screen" />
+      <Button onPress={() => navigation.navigate("ColorScreen")} title="Go to Color Screen" />
+      <Button onPress={() => navigation.navigate("SquareScreen")} title="Go to Square Screen"/>
     </View>
   );
 };
