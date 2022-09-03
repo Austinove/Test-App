@@ -1,11 +1,14 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ComponentsScreen from './src/screens/ComponentsScreen';
 import ListScreen from './src/screens/ListScreen';
 import ImageScreen from './src/screens/ImageScreen';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import CounterScreen from './src/screens/CounterScreen';
+import ColorScreen from './src/screens/ColorScreen';
+import SquareScreen from './src/screens/SquareScreen';
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
@@ -16,9 +19,11 @@ export default function App() {
           component={ComponentsScreen}
           options={{ title: "Welcome" }}
         />
-        {/* <Stack.Screen name="ListScreen" component={{ ListScreen }} /> */}
         <Stack.Screen name="ListScreen" component={ListScreen} />
         <Stack.Screen name="ImageScreen" component={ImageScreen} />
+        <Stack.Screen name="CounterScreen" component={CounterScreen} />
+        <Stack.Screen name="ColorScreen" component={ColorScreen} />
+        <Stack.Screen name="SquareScreen" component={SquareScreen} />
       </Stack.Navigator>
   </NavigationContainer>
   )
