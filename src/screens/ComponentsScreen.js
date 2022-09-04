@@ -37,6 +37,10 @@ const ComponentsScreen = ({navigation}) => {
         onPress={() => navigation.navigate('SquareScreen')}
         title="Go to Square Screen"
       />
+      <Button
+        onPress={() => navigation.navigate('TextScreen')}
+        title="Go to Text Screen"
+      />
     </View>
   );
 };
